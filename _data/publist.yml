@@ -1,0 +1,78 @@
+- title: 'Grounded Video Situtation Recognition'
+  image: Neurips.jpg
+  description: We formulate a new structured framework for dense video understanding and propose a Transformer based model, VideoWhisperer that operates on a group of clips and jointly predicts all the salient actions, Semantic roles via captioning and, spatio temporal grounding in a weakly supervised setting
+  authors: <b>Zeeshan Khan</b>, <a href="https://faculty.iiit.ac.in/~jawahar/index.html">C.V. Jawahar</a>, <a href="https://makarandtapaswi.github.io">Makarand Tapaswi</a>
+  venue: <i>In Neural Information Processing Systems (<b>NeurIPS</b>), 2022</i>
+  number_link: 3
+  link1:
+    url: https://zeecoder.github.io/grvidsitu
+    display: Paper
+  link2:
+    url: https://zeecoder.github.io/grvidsitu
+    display: Project Page
+  link3:
+    url: https://zeecoder.github.io/grvidsitu
+    display: Code (Github)
+
+- title: 'More Parameters No Thanks!'
+  image: ACL.png
+  description: We propose to recursively prune and retrain a Transformer to find language dependent submodules that involves 2 type of paramteres, 1)Shared multlingual and 2)Unique Language dependent parameters, to overcome negative interference in Multilingual Neural Machine translation. 
+  authors: <b>Zeeshan Khan</b>, Kartheek Akella, <a href="https://vinaypn.github.io"> Vinay Namboodiri</a>, and <a href="https://faculty.iiit.ac.in/~jawahar/index.html"> C.V. Jawahar </a>
+  venue: <i>In Association For Computational Linguistics (<b>ACL</b>) (Findings), 2021</i>
+  number_link: 3
+  link1:
+    url: https://aclanthology.org/2021.findings-acl.9/
+    display: Paper
+  link2:
+    url: http://cvit.iiit.ac.in/research/projects/cvit-projects/more-parameters-no-thanks
+    display: Project Page
+  link3:
+    url: https://github.com/zeecoder606/PF-Adaptation
+    display: Code (Github)
+
+
+- title: "DeepHS-HDRVideo : Deep High Speed High Dynamic Range Video Reconstruction"
+  image: HDR_video.png
+  description: This is the first attempt towards generating high speed high dynamic range videos from low speed low dynamic range videos. We use video frame interpolation to recursivrly generate the high and low exposure images missing in the input alternative exposure frames. The High and Low exposure frames are merged at each timestep to generate an HDR video.
+  authors: <b>Zeeshan Khan</b>, Parth Shettiwar, Mukul Khanna, <a href="https://people.iitgn.ac.in/~shanmuga/">Shanmuganathan Raman</a>
+  venue: <i>In International Conference on Pattern Recognition(<b>ICPR</b>), 2022 <span style="color:red;">(ORAL)</span></i>
+  number_link: 2
+  link1:
+    url: https://zeecoder.github.io/grvidsitu
+    display: Paper
+  link2:
+    url: https://zeecoder.github.io/grvidsitu
+    display: Video
+
+- title: Appearance Consistent Human Pose Transfer via Dynamic Feature Selection
+  image: Pose_transfer.png
+  description: We present a robut deep architecture for Appearance Consistent person image generation in novel poses. We incorporate a 3 stream network, for image, pose, and appearance. Additionaly we use Gated convolutions and, Non-local attention blocks for generating realistic images.
+  authors: Ashish Tiwari, <b>Zeeshan Khan</b>, <a href="https://people.iitgn.ac.in/~shanmuga/">Shanmuganathan Raman</a>
+  venue: <i>In International Conference on Pattern Recognition (<b>ICPR</b>), 2022</i>
+  number_link: 1
+  link1:
+    url: https://zeecoder.github.io/grvidsitu
+    display: Paper
+
+- title: Exploring Pair-Wise NMT for Indian Languages
+  image: ICON.png
+  description: We address the task of improving pair-wise machine translation for low resource Indian languages using a filtered back-translation process and subsequent fine-tuning on the limited pair-wise language corpora
+  authors: Kartheek Akella, Sai Himal Allu, Sridhar Suresh Ragupathi, Aman Singhal,<b>Zeeshan Khan</b>, <a href="https://vinaypn.github.io"> Vinay Namboodiri</a>, and <a href="https://faculty.iiit.ac.in/~jawahar/index.html"> C.V. Jawahar </a>
+  venue: <i>In International Conference on Natural Language Processing(<b>ICON</b>) 2020</i>
+  number_link: 1
+  link1:
+    url: https://aclanthology.org/2020.icon-main.59/
+    display: Paper
+
+- title: "FHDR: HDR Image Reconstruction from a Single LDR Image using Feedback Network"
+  image: HDR_img.png
+  description: Proposed a recurrent Feedback CNN for HDR image reconstruction from a single exposure LDR image, achieving SOTA results on all the HDR benchmarks. Designed a novel Dense Feedback Block using hidden states of RNN, to transfer the high-level information to the low-level features. LDR to HDR representations are learned in multiple iterations via feedback loops.
+  authors: <b>Zeeshan Khan</b>, Mukul khanna, and <a href="https://people.iitgn.ac.in/~shanmuga/">Prof. Shanmuganathan Raman</a>
+  venue: <i>In Global Conference on Signal and Information Processing (<b>GlobalSIP</b>) 2019</i>
+  number_link: 2
+  link1:
+    url: https://arxiv.org/pdf/1912.11463.pdf
+    display: Paper    
+  link2:
+    url: https://github.com/mukulkhanna/FHDR
+    display: Code (Github)    
