@@ -117,10 +117,10 @@ GVSR is built on top of <a href="https://vidsitu.org">VidSitu</a>. A large scale
 </center>
 
 
-BibTeX
+<h3>BibTeX</h3>
 
-<!-- ```
-@InProceedings{EgoProceLECCV2022,
+```
+@InProceedings{GrVidSitu2022,
 author="Khan, Zeeshan 
 and Jawahar, C.V.,
 and Tapaswi, Makarand"
@@ -129,7 +129,7 @@ booktitle = "Neural Information Processing Systems(NeurIPS)",
 year="2022"
 }
 
-``` -->
+```
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
