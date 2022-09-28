@@ -5,13 +5,13 @@
   venue: <i>In Neural Information Processing Systems (<b>NeurIPS</b>), 2022</i>
   number_link: 3
   link1:
-    url: https://zeecoder.github.io/grvidsitu
+    url: https://zeecoder.github.io/grvidsitu/#download
     display: Paper
   link2:
-    url: https://zeecoder.github.io/grvidsitu
+    url: https://zeecoder.github.io/grvidsitu/#download
     display: Project Page
   link3:
-    url: https://zeecoder.github.io/grvidsitu
+    url: https://zeecoder.github.io/grvidsitu/#download
     display: Code (Github)
 
 - title: 'More Parameters No Thanks!'
@@ -38,10 +38,10 @@
   venue: <i>In International Conference on Pattern Recognition(<b>ICPR</b>), 2022 <span style="color:red;">(ORAL)</span></i>
   number_link: 2
   link1:
-    url: https://zeecoder.github.io/grvidsitu
+    url: https://zeecoder.github.io/grvidsitu/#download
     display: Paper
   link2:
-    url: https://zeecoder.github.io/grvidsitu
+    url: https://zeecoder.github.io/grvidsitu/#download
     display: Video
 
 - title: Appearance Consistent Human Pose Transfer via Dynamic Feature Selection
@@ -51,7 +51,7 @@
   venue: <i>In International Conference on Pattern Recognition (<b>ICPR</b>), 2022</i>
   number_link: 1
   link1:
-    url: https://zeecoder.github.io/grvidsitu
+    url: https://zeecoder.github.io/grvidsitu/#download
     display: Paper
 
 - title: Exploring Pair-Wise NMT for Indian Languages
