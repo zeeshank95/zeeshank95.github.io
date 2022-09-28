@@ -25,13 +25,13 @@ permalink: /grvidsitu/
 
 <p style="text-align: center;">
 
-[Paper](https://zeecoder.github.io/grvidsitu/#download){: .btn}
+[Paper](https://zeecoder606.github.io/grvidsitu){: .btn}
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-[Dataset](https://zeecoder.github.io/grvidsitu/#download){: .btn}
+[Dataset](https://zeecoder606.github.io/grvidsitu){: .btn}
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-[Code](https://zeecoder.github.io/grvidsitu/#download){: .btn}
+[Code](https://zeecoder606.github.io/grvidsitu){: .btn}
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 </p>
