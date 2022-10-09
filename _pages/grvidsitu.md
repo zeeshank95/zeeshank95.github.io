@@ -118,7 +118,7 @@ GVSR is built on top of <a href="https://vidsitu.org">VidSitu</a>. A large scale
 
 <h3>More Results</h3>
 <div style="text-align: justify">
-For more results on 10 videos <a href="http://localhost:4000/GVSR.HTML">Click Here</a>
+For more results on 10 videos <a href="GVSR.html">Click Here</a>
 
 
 <h3>BibTeX</h3>
