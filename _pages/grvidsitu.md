@@ -3,7 +3,7 @@ title: "Zeeshan Khan - Grounded VidSitu"
 layout: gridlay
 excerpt: "Zeeshan Khan: Grounded VidSitu"
 sitemap: false
-permalink: /grvidsitu/
+permalink: /grvidsitu
 ---
 
 [comment]: Title
