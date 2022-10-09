@@ -28,7 +28,7 @@ permalink: /grvidsitu/
 [Paper](https://zeeshank95.github.io/grvidsitu){: .btn}
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-[Dataset](https://zeeshank95.github.io/GVSR_results){: .btn}
+[Dataset](https://zeeshank95.github.io/grvidsitu){: .btn}
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 [Code](https://zeeshank95.github.io/grvidsitu){: .btn}
@@ -116,9 +116,12 @@ GVSR is built on top of <a href="https://vidsitu.org">VidSitu</a>. A large scale
 </figure>
 </center>
 
+<h3>More Results</h3>
+<div style="text-align: justify">
+For more results on 10 videos <a href="http://localhost:4000/GVSR.HTML">Click Here</a>
+
 
 <h3>BibTeX</h3>
-
 ```
 @InProceedings{GrVidSitu2022,
 author="Khan, Zeeshan 
