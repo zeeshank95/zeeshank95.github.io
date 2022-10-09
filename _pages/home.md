@@ -19,7 +19,7 @@ With a diverse research experience in multiple domains, I aim at building machin
 <p align="center">
   <a href="./docs/Zeeshan_cv_2022.pdf">CV</a> /
   <a href="https://scholar.google.com/citations?user=uvhBVYoAAAAJ&hl=en">Google Scholar</a> /
-  <a href="https://github.com/zeecoder606">Github</a> /
+  <a href="https://github.com/zeeshank95">Github</a> /
   <a href="https://www.linkedin.com/in/khan-zeeshan-606-">LinkedIn</a> /
 </p>
 
