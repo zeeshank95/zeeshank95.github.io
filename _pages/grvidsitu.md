@@ -28,7 +28,7 @@ permalink: /grvidsitu/
 [Paper](https://zeeshank95.github.io/grvidsitu){: .btn}
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-[Dataset](https://zeeshank95.github.io/grvidsitu){: .btn}
+[Dataset](https://zeeshank95.github.io/GVSR_results){: .btn}
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 [Code](https://zeeshank95.github.io/grvidsitu){: .btn}
