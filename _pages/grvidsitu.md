@@ -11,7 +11,7 @@ permalink: /grvidsitu/
 
 [comment]: Authors
 <p style="text-align: center;">
-<a href="https://zeecoder606.github.io" style="color: #E71A06; font-size:17px;"> Zeeshan Khan</a>
+<a href="https://zeeshank95.github.io" style="color: #E71A06; font-size:17px;"> Zeeshan Khan</a>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="https://faculty.iiit.ac.in/~jawahar/index.html" style="color: #E71A06; font-size:17px;"> C.V. Jawahar</a>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -25,13 +25,13 @@ permalink: /grvidsitu/
 
 <p style="text-align: center;">
 
-[Paper](https://zeecoder606.github.io/grvidsitu){: .btn}
+[Paper](https://zeeshank95.github.io/grvidsitu){: .btn}
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-[Dataset](https://zeecoder606.github.io/grvidsitu){: .btn}
+[Dataset](https://zeeshank95.github.io/grvidsitu){: .btn}
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-[Code](https://zeecoder606.github.io/grvidsitu){: .btn}
+[Code](https://zeeshank95.github.io/grvidsitu){: .btn}
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 </p>
