@@ -38,9 +38,9 @@ permalink: /grvidsitu
 
 <!-- [comment]: ProcedureLearning -->
 <!-- <h3>GVSR Task</h3> -->
-<h3>GVSR Task</h3>
+<h3>GVSR</h3>
 <div style="text-align: justify">
-GVSR is built on top of <a href="https://vidsitu.org">VidSitu</a>. A large scale dataset containing videos of 10 seconds from complex movie scenes. A video is divded in multiple events of ~2 seconds each. Each event is associated with a salient action verb, each action verb is associated with a semantic role frame eg: agent, patient, tool, location, manner etc. Each role is is annotated using a free form text caption.
+GVSR is structured dense video understanding task. It is built on top of <a href="https://vidsitu.org">VidSitu</a>. A large scale dataset containing videos of 10 seconds from complex movie scenes. A video is divded in multiple events of ~2 seconds each. Each event is associated with a salient action verb, each action verb is associated with a semantic role frame eg: agent, patient, tool, location, manner etc. Each role is is annotated using a free form text caption. All the role entities are coreferenced in all the events of a video. 
 
 
 <center>
@@ -50,7 +50,7 @@ GVSR is built on top of <a href="https://vidsitu.org">VidSitu</a>. A large scale
 		</div>
     <p>&nbsp;</p>
     <figcaption>
-      Holistic understanding of video requires to localise and recognise all the salient events, and answer questions, like who did what to whom with what how why and where. GVSR affords this by recognising the action <b>verbs</b>, their corresponding <b>roles</b>, and <b>localising</b> them in the spatio-temporal domain. Entities are coreferenced in all the events.
+      Dense video understanding requires answering several questions such as who is doing what to whom, with what, how, why, and where. GVSR affords this by recognising the action <b>verbs</b>, their corresponding <b>roles</b>, and <b>localising</b> them in the spatio-temporal domain in a weakly supervised setting, i.e. the supervision for grounding is provided only in form of role-captions without any ground truth bounding boxes. 
     </figcaption>
 </figure>
 </center>
