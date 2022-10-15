@@ -118,7 +118,7 @@ GVSR is structured dense video understanding task. It is built on top of <a href
 
 <h3>More Results</h3>
 <div style="text-align: justify">
-For more results on 10 videos <a href="../GVSR.html">Click Here</a>
+For more results on 10 videos <a href="../grvidsitu/GVSR.html">Click Here</a>
 
 
 <h3>BibTeX</h3>
