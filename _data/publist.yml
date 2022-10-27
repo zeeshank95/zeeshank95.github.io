@@ -41,7 +41,7 @@
     url: https://arxiv.org/abs/2210.04429
     display: Paper
   link2:
-    url: https://zeeshank95.github.io/
+    url: https://youtu.be/TWWv7fh0Slk
     display: Video
 
 - title: Appearance Consistent Human Pose Transfer via Dynamic Feature Selection
@@ -68,7 +68,7 @@
   image: HDR_img.png
   description: Proposed a recurrent Feedback CNN for HDR image reconstruction from a single exposure LDR image, achieving SOTA results on all the HDR benchmarks. Designed a novel Dense Feedback Block using hidden states of RNN, to transfer the high-level information to the low-level features. LDR to HDR representations are learned in multiple iterations via feedback loops.
   authors: <b>Zeeshan Khan</b>, Mukul khanna, and <a href="https://people.iitgn.ac.in/~shanmuga/">Prof. Shanmuganathan Raman</a>
-  venue: <i>In Global Conference on Signal and Information Processing (<b>GlobalSIP</b>) 2019</i>
+  venue: <i>In Global Conference on Signal and Information Processing (<b>GlobalSIP</b>) 2019 <span style="color:red;">(ORAL)</span></i> 
   number_link: 2
   link1:
     url: https://arxiv.org/pdf/1912.11463.pdf
