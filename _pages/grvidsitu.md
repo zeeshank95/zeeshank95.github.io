@@ -123,15 +123,12 @@ For more results on 10 videos <a href="../grvidsitu/GVSR.html">Click Here</a>
 
 <h3>BibTeX</h3>
 ```
-@InProceedings{GrVidSitu2022,
-author="Khan, Zeeshan 
-and Jawahar, C.V.,
-and Tapaswi, Makarand"
-title="Grounded Video Situation Recognition",
-booktitle = "Neural Information Processing Systems(NeurIPS)",
-year="2022"
+@article{khan2022grounded,
+  title={Grounded Video Situation Recognition},
+  author={Khan, Zeeshan and Jawahar, CV and Tapaswi, Makarand},
+  journal={arXiv preprint arXiv:2210.10828},
+  year={2022}
 }
-
 ```
 
 <p>&nbsp;</p>
