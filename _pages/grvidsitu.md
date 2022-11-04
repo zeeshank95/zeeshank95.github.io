@@ -123,11 +123,14 @@ For more results on 10 videos <a href="../grvidsitu/GVSR.html">Click Here</a>
 
 <h3>BibTeX</h3>
 ```
-@article{khan2022grounded,
-  title={Grounded Video Situation Recognition},
-  author={Khan, Zeeshan and Jawahar, CV and Tapaswi, Makarand},
-  journal={arXiv preprint arXiv:2210.10828},
-  year={2022}
+@inproceedings{
+khan2022grounded,
+title={Grounded Video Situation Recognition},
+author={Zeeshan Khan and C.V. Jawahar and Makarand Tapaswi},
+booktitle={Advances in Neural Information Processing Systems},
+editor={Alice H. Oh and Alekh Agarwal and Danielle Belgrave and Kyunghyun Cho},
+year={2022},
+url={https://openreview.net/forum?id=yRhbHp_Vh8e}
 }
 ```
 
