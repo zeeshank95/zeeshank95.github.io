@@ -70,7 +70,7 @@ GVSR is structured dense video understanding task. It is built on top of <a href
 <center>
 <figure>
 		<div id="projectid">
-    <img src="{{ site.url }}{{ site.baseurl }}/images/pubpic/Model_Diagram_Final.pdf" width="700px" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/pubpic/Model_Diagram_Final.jpg" width="700px" />
 		</div>
     <p>&nbsp;</p>
     <figcaption>
