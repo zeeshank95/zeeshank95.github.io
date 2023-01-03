@@ -12,11 +12,11 @@ permalink: /
 
 <div class="col-sm-8">
 
-I am an MS by research student at <a href="http://cvit.iiit.ac.in">CVIT IIIT Hyderabad</a> advised by <a href="https://faculty.iiit.ac.in/~jawahar/index.html">C.V. Jawahar</a> and <a href="https://makarandtapaswi.github.io">Makarand Tapaswi</a>. My research is focused on weakly supervised dense video understanding using vision and language. It involves learning object centric video representations, semantic role labelling thorugh captioning, coreferencing of entities/humans in multiple events and, spatio-temporal grounding without box supervision. 
+Hi!! I am a MS research student in Computer Science at <a href="http://cvit.iiit.ac.in">CVIT IIIT Hyderabad</a> advised by <a href="https://faculty.iiit.ac.in/~jawahar/index.html">C.V. Jawahar</a> and <a href="https://makarandtapaswi.github.io">Makarand Tapaswi</a>. My research is focused on holistic video understanding. It involves vision-language interaction for jointly modeling multi-event action recognition, fine-grained human-object semantic relation reasoning, spatio-temporal grounding, and coreferencing of humans and entities in long videos. 
 
-Prior to this I was a Research Assistant in the Computer Vision lab at <a href="https://iitgn.ac.in">IIT Gandhinagar</a>, advised by <a href="https://people.iitgn.ac.in/~shanmuga/"> Shanmuganathan Raman</a>. I worked in Computational Photography specifically in high dynamic range image and video reconstruction and, generative modelling in appearance consistent human pose transfer.  
+Prior to this I was a Research Assistant in the Computer Vision lab at <a href="https://iitgn.ac.in">IIT Gandhinagar</a>, advised by <a href="https://people.iitgn.ac.in/~shanmuga/"> Shanmuganathan Raman</a>. I worked in Computational Photography specifically in high dynamic range image and video reconstruction and, generative modeling in appearance consistent human pose transfer.  
 
-I aim at building machines with multimodal sensing abilities that can understand and connect fine-grained aspects of long videos, like objects, humans, actions, intentions, emotions, location and story plots.
+I am interested in vision-language interaction in a self-supervised setting, for scalable holistic video representation learning that can capture actions, entities with their semantic roles, and their relations over time. With a goal of achieving human like cognition abilities for machines, I aim at building machines that can interact with the real world possessing multimodal sensing abilities, long term spatio-temporal reasoning, and the ability to generate natural language.
 
 <p align="center">
   <a href="./docs/Zeeshan_cv_2022.pdf">CV</a> /
