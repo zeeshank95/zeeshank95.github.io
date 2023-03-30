@@ -28,10 +28,10 @@ permalink: /grvidsitu
 [Paper](https://arxiv.org/abs/2210.10828){: .btn}
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-[Dataset](https://zeeshank95.github.io/grvidsitu){: .btn}
+[Dataset](https://github.com/zeeshank95/GVSR/blob/main/data/DATA_PREP.md){: .btn}
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-[Code](https://zeeshank95.github.io/grvidsitu){: .btn}
+[Code](https://github.com/zeeshank95/GVSR){: .btn}
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 </p>
