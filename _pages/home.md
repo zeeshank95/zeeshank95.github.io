@@ -12,11 +12,13 @@ permalink: /
 
 <div class="col-sm-8">
 
-Hi! I am an incoming PhD student in the <a href="http://www.di.ens.fr/willow">Willow</a> team at <a href="https://www.inria.fr/fr">Inria</a> Paris, advised by <a href="https://antoyang.github.io">Antoine Yang</a>, <a href="https://www.di.ens.fr/willow/people_webpages/cordelia/">Cordelia Schmid</a> and, <a href="https://www.di.ens.fr/~laptev/">Ivan Laptev</a>. I will be working in vision and language understanding. I did my Masters by Research in Computer Science with a specalization in AI from <a href="http://cvit.iiit.ac.in">CVIT IIIT Hyderabad</a> advised by <a href="https://faculty.iiit.ac.in/~jawahar/index.html">C.V. Jawahar</a> and <a href="https://makarandtapaswi.github.io">Makarand Tapaswi</a>. My thesis was on Situation Recognition for Holistic Video Understanding.
+Hi! I am a first year PhD student in the <a href="http://www.di.ens.fr/willow">Willow</a> team at <a href="https://www.inria.fr/fr">Inria</a> Paris, advised by <a href="https://antoyang.github.io">Antoine Yang</a>, <a href="https://www.di.ens.fr/~laptev/">Ivan Laptev</a> and, <a href="https://www.di.ens.fr/willow/people_webpages/cordelia/">Cordelia Schmid</a>. I will be working in vision-language models for Video Understanding. 
+
+I did my Masters by Research in Computer Science with a specalization in AI from <a href="http://cvit.iiit.ac.in">CVIT IIIT Hyderabad</a> advised by <a href="https://faculty.iiit.ac.in/~jawahar/index.html">C.V. Jawahar</a> and <a href="https://makarandtapaswi.github.io">Makarand Tapaswi</a>. My thesis was on Situation Recognition for Holistic Video Understanding.
 
 Prior to this I was a Research Assistant in the Computer Vision lab at <a href="https://iitgn.ac.in">IIT Gandhinagar</a>, advised by <a href="https://people.iitgn.ac.in/~shanmuga/"> Shanmuganathan Raman</a>. I worked in Computational Photography specifically in high dynamic range image and video reconstruction and generative modeling in appearance consistent human pose transfer.  
 
-I am interested in vision-language interaction in a self-supervised setting, for scalable holistic video representation learning that can capture actions, entities with their semantic roles, and their relations over time. With a goal of achieving human like visual cognition abilities for machines, I aim at building machines that can interact with the real world, possessing multimodal sensing abilities, long term spatio-temporal reasoning, and the ability to generate natural language.
+I am interested in vision-language interaction in a self-supervised setting, for holistic video representation learning that can capture actions, entities with their semantic roles, and their relations over time. With a goal of achieving human like visual cognition abilities for machines, I aim at building machines that can interact with the real world, possessing multimodal sensing abilities, long term spatio-temporal reasoning, and the ability to generate natural language.
 
 <p align="center">
   <a href="./docs/Zeeshan_cv_2022.pdf">CV</a> /
@@ -43,8 +45,9 @@ I am interested in vision-language interaction in a self-supervised setting, for
 
   <!-- <br clear="all" /> -->
 
-  <A HREF="mailto:zeeshan.khan@research.iiit.ac.in">zeeshan.khan@research.iiit.ac.in</A> <br>
-  CVIT-IIIT Hyderabad, India.<br>
+  <A HREF="mailto:zeeshan.khan@inria.fr">zeeshan.khan@inria.fr</A> <br>
+  Office: C-412<br>
+  Address: 2 Rue Simone IFF, 75012 Paris France<br>
 
 
 </div>
