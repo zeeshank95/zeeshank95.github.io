@@ -1,3 +1,37 @@
+- title: 'VELOCITI: Can Video-Language Models Bind Semantic Concepts Through Time?'
+  image: velociti.png
+  description: We create a new benchmark to evaluate video VLMs both contrastive and LLM based. The tasks are designed to evaluate fine-grained compositional understanding abilities of VLMs. All of the open-source VLMs perform close to random. Gemini outperforms all but with a significant gap to human performance.
+  authors: Darshana Saravanan,  Darshan Singh, Varun Gupta, <b>Zeeshan Khan</b>, Vineet Gandhi, <a href="https://makarandtapaswi.github.io">Makarand Tapaswi</a>, 
+  venue: <i> under submission 2024</i>
+  number_link: 3
+  link1:
+    url: https://arxiv.org/pdf/%3CARXIV%20PAPER%20ID%3E
+    display: Paper
+  link2:
+    url: https://katha-ai.github.io/projects/velociti/
+    display: Project Page
+  link3:
+    url: https://github.com/velociti-benchmark/VELOCITI
+    display: Code (Github)
+
+
+- title: 'MICap: A Unified Model for Identity-aware Movie Descriptions'
+  image: micap.png
+  description: We design a single stage framework for Identity aware captioning of movie videos, we also propose a new captioning metric called <i>iSPICE</i>, that is sensitive to wrong identiities in captions.
+  authors: Haran Raajesh, Naveen Reddy Desanur, <b>Zeeshan Khan</b>, <a href="https://makarandtapaswi.github.io">Makarand Tapaswi</a>, 
+  venue: <i> In the Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>) 2024</i>
+  number_link: 3
+  link1:
+    url: https://openaccess.thecvf.com/content/CVPR2024/papers/Raajesh_MICap_A_Unified_Model_for_Identity-Aware_Movie_Descriptions_CVPR_2024_paper.pdf
+    display: Paper
+  link2:
+    url: https://katha-ai.github.io/projects/micap/
+    display: Project Page
+  link3:
+    url: https://github.com/katha-ai/MovieIdentityCaptioner-CVPR2024
+    display: Code (Github)
+
+
 - title: 'Grounded Video Situtation Recognition'
   image: Neurips.jpg
   description: We formulate a new structured framework for dense video understanding and propose a Transformer based model, VideoWhisperer that operates on a group of clips and jointly predicts all the salient actions, Semantic roles via captioning and, spatio temporal grounding in a weakly supervised setting
