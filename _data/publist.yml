@@ -1,6 +1,6 @@
 - title: 'ComposeAnything: Composite Object Priors for Text-to-Image Generation'
   image: CA_teaser.pdf
-  description: We create a new benchmark to evaluate video VLMs both contrastive and LLM based. The tasks are designed to evaluate fine-grained compositional understanding abilities of VLMs. All of the open-source VLMs perform close to random. Gemini outperforms all but with a significant gap to human performance.
+  description: The proposed ComposeAnything framework enables text-to-image generation for com- plex compositions involving surreal spatial relationships and high object counts.
   authors: <b>Zeeshan Khan</b>, Shizhe Chen, Cordelia Schmid 
   venue: <i> under review </i>
   number_link: 3
