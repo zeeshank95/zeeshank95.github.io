@@ -1,17 +1,34 @@
+- title: 'ComposeAnything: Composite Object Priors for Text-to-Image Generation'
+  image: CA_teaser.pdf
+  description: We create a new benchmark to evaluate video VLMs both contrastive and LLM based. The tasks are designed to evaluate fine-grained compositional understanding abilities of VLMs. All of the open-source VLMs perform close to random. Gemini outperforms all but with a significant gap to human performance.
+  authors: <b>Zeeshan Khan</b>, Shizhe Chen, Cordelia Schmid 
+  venue: <i> under review </i>
+  number_link: 3
+  link1:
+    url: https://zeeshank95.github.io/composeanything/ca.html
+    display: Paper
+  link2:
+    url: https://zeeshank95.github.io/composeanything/ca.html
+    display: Project Page
+  link3:
+    url: https://zeeshank95.github.io/composeanything/ca.html
+    display: Code (Github)
+    
+
 - title: 'VELOCITI: Can Video-Language Models Bind Semantic Concepts Through Time?'
   image: velociti.png
   description: We create a new benchmark to evaluate video VLMs both contrastive and LLM based. The tasks are designed to evaluate fine-grained compositional understanding abilities of VLMs. All of the open-source VLMs perform close to random. Gemini outperforms all but with a significant gap to human performance.
   authors: Darshana Saravanan,  Darshan Singh, Varun Gupta, <b>Zeeshan Khan</b>, Vineet Gandhi, <a href="https://makarandtapaswi.github.io">Makarand Tapaswi</a>, 
-  venue: <i> under submission 2024</i>
+  venue: <i> In the Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>) 2025</i>
   number_link: 3
   link1:
-    url: https://arxiv.org/pdf/%3CARXIV%20PAPER%20ID%3E
+    url: https://arxiv.org/abs/2406.10889
     display: Paper
   link2:
     url: https://katha-ai.github.io/projects/velociti/
     display: Project Page
   link3:
-    url: https://github.com/velociti-benchmark/VELOCITI
+    url: https://github.com/katha-ai/VELOCITI
     display: Code (Github)
 
 
