@@ -12,13 +12,11 @@ permalink: /
 
 <div class="col-sm-8">
 
-Hi! I am a first year PhD student in the <a href="http://www.di.ens.fr/willow">Willow</a> team at <a href="https://www.inria.fr/en">Inria</a> and  <a href="https://www.ens.psl.eu/en">École Normale Supérieure</a> in Paris, advised by <a href="https://cshizhe.github.io">Shizhe Chen</a> and <a href="https://www.di.ens.fr/willow/people_webpages/cordelia/">Cordelia Schmid</a>. I am working in vision-language understanding and generation. 
+Hi! I am a second year PhD student in the <a href="http://www.di.ens.fr/willow">Willow</a> team at <a href="https://www.inria.fr/en">Inria</a> and  <a href="https://www.ens.psl.eu/en">École Normale Supérieure</a> in Paris, advised by <a href="https://cshizhe.github.io">Shizhe Chen</a> and <a href="https://cordeliaschmid.github.io">Cordelia Schmid</a>. I am working on Diffusion models for vision-language generation. 
 
-I did my Masters by Research in Computer Science from <a href="http://cvit.iiit.ac.in">CVIT IIIT Hyderabad</a> advised by <a href="https://faculty.iiit.ac.in/~jawahar/index.html">C.V. Jawahar</a> and <a href="https://makarandtapaswi.github.io">Makarand Tapaswi</a>. My thesis was on Situation Recognition for Holistic Video Understanding.
+I did my Masters by Research in Computer Science from <a href="http://cvit.iiit.ac.in">CVIT IIIT Hyderabad</a> advised by <a href="https://faculty.iiit.ac.in/~jawahar/index.html">C.V. Jawahar</a> and <a href="https://makarandtapaswi.github.io">Makarand Tapaswi</a>. My thesis was on Situation Recognition for Holistic Video Understanding. Prior to this I was a Research Assistant in the Computer Vision lab at <a href="https://iitgn.ac.in">IIT Gandhinagar</a>, advised by <a href="https://people.iitgn.ac.in/~shanmuga/"> Shanmuganathan Raman</a>. I worked in Computational Photography for high dynamic range image and video reconstruction 
 
-Prior to this I was a Research Assistant in the Computer Vision lab at <a href="https://iitgn.ac.in">IIT Gandhinagar</a>, advised by <a href="https://people.iitgn.ac.in/~shanmuga/"> Shanmuganathan Raman</a>. I worked in Computational Photography specifically in high dynamic range video reconstruction and generative modeling in appearance consistent human pose transfer.  
-
-I am interested in holistic video representation learning, and its application in both vision-language perception and generation. I aim at building machines that can interact with the real world, possessing multimodal sensing abilities, long term spatio-temporal reasoning, and the ability to generate natural language.
+I am broadly interested in unified multimodal models (Dffusion + autoregressive LLMs) for joint understanding and generation of text, image and videos. Currently I am exploring compositional representations for high fidelity and interpretable text-to-image/video Diffusion models.
 
 <p align="center">
   <a href="./docs/Zeeshan_cv_2022.pdf">CV</a> /

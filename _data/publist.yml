@@ -1,7 +1,7 @@
 - title: 'ComposeAnything: Composite Object Priors for Text-to-Image Generation'
   image: CA_teaser.pdf
-  description: The proposed ComposeAnything framework enables text-to-image generation for com- plex compositions involving surreal spatial relationships and high object counts.
-  authors: <b>Zeeshan Khan</b>, Shizhe Chen, Cordelia Schmid 
+  description: ComposeAnything framework enables interpretable text-to-image generation for complex compositions involving surreal 2D, 3D spatial relationships and high object counts.
+  authors: <b>Zeeshan Khan</b>, <a href="https://cshizhe.github.io">Shizhe Chen</a>, <a href="https://cordeliaschmid.github.io">Cordelia Schmid</a> 
   venue: <i> under review </i>
   number_link: 3
   link1:
