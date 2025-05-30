@@ -156,14 +156,14 @@
 
         <div class="row" id="method" style="max-width:1000px; margin:0 auto; text-align:justify">
             <center>
-                <img src="resources/CA_assets/CA_teaser.pdf" width="100%">
+                <img src="resources/CA_assets/CA_teaser.png" width="100%">
             </center>
         </div>
 
         <div class="row" id="abstract" style="max-width:1000px; margin:0 auto; text-align:justify">
             <h3>Abstract</h3>
             <p style="text-align: justify;">
-                Generating images from text involving complex and novel object arrangements remains a significant challenge for current text-to-image (T2I) models. Although prior layout-based methods improve object arrangements using spatial constraints with 2D layouts, they often struggle to capture 3D positioning and sacrifice quality and coherence. In this work, we introduce ComposeAnything, a novel framework for improving compositional image generation without retraining existing T2I mod- els. Our approach first leverages the chain-of-thought reasoning abilities of LLMs to produce 2.5D semantic layouts from text, consisting of 2D object bounding boxes enriched with depth information and detailed captions. Based on this layout, we generate a spatial and depth aware coarse composite of objects that captures the intended composition, serving as a strong and interpretable prior that replaces stochastic noise initialization in diffusion-based T2I models. This prior guides the denoising process through object prior reinforcement and spatial-controlled denoising, enabling seamless generation of compositional objects and coherent backgrounds, while allowing refinement of inaccurate priors. ComposeAnything outperforms state-of-the-art methods on the T2I-CompBench and NSR-1K benchmarks for prompts with 2D/3D spatial arrangements, high object counts, and surreal compositions. Human evaluations further demonstrate that our model generates high-quality images with compositions that faithfully reflect the text.
+                Generating images from text involving complex and novel object arrangements remains a significant challenge for current text-to-image (T2I) models. Although prior layout-based methods improve object arrangements using spatial constraints with 2D layouts, they often struggle to capture 3D positioning and sacrifice quality and coherence. In this work, we introduce ComposeAnything, a novel framework for improving compositional image generation without retraining existing T2I models. Our approach first leverages the chain-of-thought reasoning abilities of LLMs to produce 2.5D semantic layouts from text, consisting of 2D object bounding boxes enriched with depth information and detailed captions. Based on this layout, we generate a spatial and depth aware coarse composite of objects that captures the intended composition, serving as a strong and interpretable prior that replaces stochastic noise initialization in diffusion-based T2I models. This prior guides the denoising process through object prior reinforcement and spatial-controlled denoising, enabling seamless generation of compositional objects and coherent backgrounds, while allowing refinement of inaccurate priors. ComposeAnything outperforms state-of-the-art methods on the T2I-CompBench and NSR-1K benchmarks for prompts with 2D/3D spatial arrangements, high object counts, and surreal compositions. Human evaluations further demonstrate that our model generates high-quality images with compositions that faithfully reflect the text.
 	        </p>
         </div><!-- Import the component -->
 
@@ -200,7 +200,7 @@
         <div class="row" id="qual" style="max-width:1000px; margin:0 auto; text-align:justify">
             <h3>Qualitative Results</h3><br>
             <center>
-                <img src="resources/CA_assets/SOTA_Fig.pdf" width="100%">
+                <img src="resources/CA_assets/SOTA_Fig.png" width="100%">
             </center>
             <br>
             <p style="text-align: justify;">

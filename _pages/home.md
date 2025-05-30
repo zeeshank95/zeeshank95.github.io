@@ -16,7 +16,7 @@ Hi! I am a second year PhD student in the <a href="http://www.di.ens.fr/willow">
 
 I did my Masters by Research in Computer Science from <a href="http://cvit.iiit.ac.in">CVIT IIIT Hyderabad</a> advised by <a href="https://faculty.iiit.ac.in/~jawahar/index.html">C.V. Jawahar</a> and <a href="https://makarandtapaswi.github.io">Makarand Tapaswi</a>. My thesis was on Situation Recognition for Holistic Video Understanding, exploring structured representations to enable deeper semantic understanding of dynamic scenes. Prior to this I was a Research Assistant in the Computer Vision lab at <a href="https://iitgn.ac.in">IIT Gandhinagar</a>, where I worked with <a href="https://shanmuga.people.iitgn.ac.in"> Shanmuganathan Raman</a>. My work centered around Computational Photography, specifically in high dynamic range (HDR) image and video reconstruction.
 
-I am broadly interested in unified multimodal models particularly at the intersection of diffusion models and autoregressive large language models for joint understanding and generation across text, images, and videos. Currently I am exploring compositional representations for high fidelity and interpretable text-to-image/video diffusion models.
+I am broadly interested in unified large multimodal diffusion models particularly at the intersection of vision and language for joint understanding and generation across text, images, and videos. Currently I am exploring compositional representations for high fidelity and interpretable text-to-image/video diffusion models.
 
 <p align="center">
   <a href="./docs/Zeeshan_cv_2022.pdf">CV</a> /
