@@ -5,13 +5,13 @@
   venue: <i> under review </i>
   number_link: 3
   link1:
-    url: https://zeeshank95.github.io/composeanything/ca.html
+    url: https://arxiv.org/abs/2505.24086
     display: Paper
   link2:
     url: https://zeeshank95.github.io/composeanything/ca.html
     display: Project Page
   link3:
-    url: https://zeeshank95.github.io/composeanything/ca.html
+    url: https://github.com/zeeshank95/ComposeAnything
     display: Code (Github)
     
 
