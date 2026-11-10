@@ -1,273 +1,710 @@
-<script src="http://www.google.com/jsapi" type="text/javascript"></script>
-
-<style>
-    .button {
-        background-color: #4CAF50;
-        /* Green */
-        border: none;
-        color: white;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 5px 10px;
-        cursor: pointer;
-    }
-
-    .button1 {
-        border-radius: 5px;
-        /* font-size: 18px; */
-        background-color: white;
-        color: black;
-        border: 2px solid #2d6987
-        /* Green */
-    }
-
-    .button2 {
-        border-radius: 4px;
-    }
-
-    .button3 {
-        border-radius: 8px;
-    }
-
-    .button4 {
-        border-radius: 12px;
-    }
-
-    .button5 {
-        border-radius: 50%;
-    }
-
-
-    .td-center {
-        align: center;
-        text-align: center;
-        padding: 10px
-    }
-
-    .text_div {
-        text-align: justify;
-        text-justify: inter-word;
-    }
-
-    #blink {
-        color: red;
-        transition: 0.4s;
-    }
-    .crop {
-        width: 650px;
-        
-        overflow: hidden;
-    }
-    .crop1 {
-        width: 650px;
-        margin: -75px 0 -75px 0px;
-    }
-</style>
-
-
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-W1LDHVTXGV"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W1LDHVTXGV"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-        gtag('config', 'G-W1LDHVTXGV');
-        </script>
-        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel='icon' href='favicon.ico' type='image/x-icon'/>
-        <meta name="description" content="ComposeAnything: Composite Object Priors for Text-to-Image Generation">
-        <meta name="author" content="WILLOW team">
-        <title>ComposeAnything: Composite Object Priors for Text-to-Image Generation</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-    </head>
+    gtag('config', 'G-W1LDHVTXGV');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <meta name="description" content="ComposeAnything: Composite Object Priors for Text-to-Image Generation (WACV 2027)">
+    <meta name="author" content="WILLOW team">
+    <meta property="og:title" content="ComposeAnything: Composite Object Priors for Text-to-Image Generation">
+    <meta property="og:description" content="An editable 2.5D composite object prior guides a text-to-image model at inference time, with no retraining. WACV 2027.">
+    <meta property="og:image" content="https://zeeshank95.github.io/composeanything/resources/wacv/teaser.jpg">
+    <meta property="og:url" content="https://zeeshank95.github.io/composeanything/ca.html">
+    <title>ComposeAnything: Composite Object Priors for Text-to-Image Generation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #1d2433;
+            --ink-2: #4a5263;
+            --muted: #6b7280;
+            --line: #e5e7eb;
+            --soft: #f6f6fb;
+            --accent: #5a48c8;
+            --accent-2: #2f8fd8;
+            --tag: #ece9fb;
+            --ours: #f0eefc;
+        }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            background: #ffffff;
+            color: var(--ink);
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        img { max-width: 100%; }
 
-    <body>
-    <div class="container">
+        .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+        .narrow { max-width: 820px; margin-left: auto; margin-right: auto; }
 
-        <div style="height:20px;"></div>
-        <div class="header">
-            <h3>
-                <center> <b>ComposeAnything: Composite Object Priors for Text-to-Image Generation</b> </center>
-            </h3>
+        /* ---------- hero ---------- */
+        .hero {
+            text-align: center;
+            padding: 56px 0 30px;
+            background: linear-gradient(180deg, #f4f2fd 0%, #ffffff 100%);
+            border-bottom: 1px solid var(--line);
+        }
+        .venue-badge {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent);
+            border: 1px solid rgba(90, 72, 200, 0.35);
+            border-radius: 999px;
+            padding: 4px 14px;
+            margin-bottom: 18px;
+            background: #fff;
+        }
+        .wordmark {
+            font-size: 56px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.05;
+            margin: 0;
+            background: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .title {
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 1.3;
+            margin: 10px auto 0;
+            max-width: 820px;
+            color: var(--ink);
+        }
+        .authors {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 34px;
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 26px;
+        }
+        .authors a { color: #1a56a8; }
+        .affiliation {
+            color: var(--ink-2);
+            font-size: 15px;
+            margin-top: 6px;
+        }
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 22px;
+        }
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 20px;
+            border-radius: 999px;
+            background: var(--ink);
+            color: #fff;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .pill:hover { background: #000; text-decoration: none; }
+        .pill svg { width: 16px; height: 16px; fill: currentColor; }
+
+        /* ---------- highlights ---------- */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 30px;
+        }
+        .stat {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 18px 20px;
+            text-align: center;
+            box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .stat .head {
+            font-size: 19px;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            line-height: 1.25;
+            min-height: 2.5em;
+            background: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .stat .txt {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: var(--ink-2);
+            margin-top: 6px;
+            line-height: 1.45;
+        }
+
+        /* ---------- sections ---------- */
+        section { padding: 48px 0; }
+        section + section { border-top: 1px solid var(--line); }
+        section.tint { background: var(--soft); }
+        h2 {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            text-align: center;
+            margin: 0 0 22px;
+        }
+        h2::after {
+            content: "";
+            display: block;
+            width: 44px;
+            height: 3px;
+            margin: 10px auto 0;
+            border-radius: 2px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        }
+        h3.sub {
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+            margin: 56px 0 6px;
+        }
+        h3.sub.first { margin-top: 8px; }
+        p { margin: 0 0 14px; }
+        .lead { text-align: center; color: var(--ink-2); }
+        .abstract p { text-align: justify; hyphens: auto; }
+
+        /* ---------- figure cards: a figure and its text in one box ---------- */
+        .fcard {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 20px 22px;
+            box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+        }
+        .fcard + .fcard { margin-top: 24px; }
+        .fcard.w80 { max-width: 860px; margin-left: auto; margin-right: auto; }
+        .fcard img { display: block; width: 100%; height: auto; }
+        .fcard-head { margin-bottom: 14px; }
+        .fcard-head h3 { margin: 0; font-size: 19px; font-weight: 700; }
+        .fcard-head p { margin: 2px 0 0; color: var(--ink-2); font-size: 15px; }
+        .fcap { margin: 12px 0 0; font-size: 14px; color: var(--ink-2); text-align: center; }
+        /* notes sit in a row under the panels they describe */
+        .notes {
+            display: grid;
+            gap: 14px;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px dashed var(--line);
+            font-size: 13.5px;
+            line-height: 1.45;
+            color: var(--ink-2);
+            text-align: center;
+        }
+        .notes b { display: block; color: var(--ink); }
+        .notes .hl b { color: var(--accent); }
+        .notes.c2 { grid-template-columns: 1fr 1fr; }
+        .notes.c4 { grid-template-columns: repeat(4, 1fr); }
+        .notes.c5 { grid-template-columns: repeat(5, 1fr); }
+        .notes.c1122 { grid-template-columns: 1fr 1fr 2fr 2fr; }
+        .fstat {
+            margin-top: 14px;
+            padding: 8px 12px;
+            border-radius: 10px;
+            background: var(--soft);
+            font-size: 14px;
+            color: var(--ink);
+            text-align: center;
+        }
+        @media (max-width: 760px) {
+            .fcard { padding: 12px; border-radius: 12px; }
+            .notes.c4, .notes.c5, .notes.c1122 { grid-template-columns: 1fr 1fr; }
+        }
+
+        /* ---------- method cards ---------- */
+        .step-tag {
+            display: inline-block;
+            font-size: 11.5px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent);
+            background: var(--tag);
+            border-radius: 6px;
+            padding: 2px 8px;
+            margin: 0 0 6px;
+        }
+        .card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+        }
+        .card + .card { margin-top: 22px; }
+        .card h3 { margin: 0 0 4px; font-size: 20px; font-weight: 700; }
+        .card .fig { display: block; width: 100%; height: auto; margin: 16px 0 18px; }
+        .card p { color: var(--ink-2); }
+        .card p:last-child { margin-bottom: 0; }
+        .card b { color: var(--ink); }
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+        .steps .n {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: #fff;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+        .steps h4 { margin: 0 0 4px; font-size: 16px; font-weight: 700; color: var(--ink); }
+        .steps p { font-size: 15px; margin: 0; }
+        .guides {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            margin-bottom: 14px;
+        }
+        .guide {
+            background: var(--soft);
+            border-radius: 12px;
+            padding: 14px 16px;
+        }
+        .guide h4 { margin: 0 0 4px; font-size: 16px; font-weight: 700; color: var(--ink); }
+        .guide p { font-size: 15px; margin: 0; }
+        @media (max-width: 860px) {
+            .steps, .guides { grid-template-columns: 1fr; }
+        }
+
+        /* ---------- tables ---------- */
+        .tcap {
+            text-align: center;
+            color: var(--muted);
+            font-size: 13.5px;
+            margin: 10px auto 0;
+            max-width: 820px;
+        }
+        .table-wrap { overflow-x: auto; margin-top: 14px; }
+        .res-table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            font-size: 14.5px;
+            white-space: nowrap;
+            background: #fff;
+        }
+        /* tabular figures only on numbers: in Inter they also widen hyphens ("SD3 - M") */
+        .res-table td:not(:first-child) { font-variant-numeric: tabular-nums; }
+        .res-table th, .res-table td { padding: 6px 13px; text-align: center; }
+        .res-table th { font-weight: 600; }
+        .res-table th:first-child, .res-table td:first-child { text-align: left; }
+        .res-table thead { border-top: 2px solid var(--ink); border-bottom: 1px solid var(--ink); }
+        .res-table thead tr.grp th { border-bottom: 1px solid #c9ccd3; }
+        .res-table tbody { border-bottom: 2px solid var(--ink); }
+        .res-table tr.group td { border-top: 1px solid #c9ccd3; }
+        .res-table tr.ours td { background: var(--ours); }
+        .res-table td.best { font-weight: 700; }
+        .res-table .sep { border-left: 1px solid #c9ccd3; }
+        .res-table.small { font-size: 14px; }
+
+        /* ---------- bibtex ---------- */
+        .bib {
+            position: relative;
+            background: #0f172a;
+            color: #e2e8f0;
+            border-radius: 12px;
+            padding: 18px 20px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            font-size: 13.5px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            margin: 0;
+        }
+        .copy {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font: 600 12px "Inter", sans-serif;
+            color: #e2e8f0;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .copy:hover { background: rgba(255, 255, 255, 0.2); }
+
+        /* ---------- footer ---------- */
+        footer {
+            border-top: 1px solid var(--line);
+            padding: 30px 0 36px;
+            background: #fff;
+        }
+        .logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px 60px;
+        }
+        .fine h4 {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0 0 6px;
+        }
+        .fine p {
+            font-size: 14px;
+            color: var(--ink-2);
+            text-align: justify;
+            hyphens: auto;
+            margin-bottom: 22px;
+        }
+        .fine p:last-child { margin-bottom: 0; }
+
+        @media (max-width: 760px) {
+            .wordmark { font-size: 38px; }
+            .title { font-size: 21px; }
+            .authors { font-size: 16px; gap: 4px 20px; }
+            .stats { grid-template-columns: 1fr; }
+            .stat .head { min-height: 0; }
+            section { padding: 36px 0; }
+            .figure { padding: 10px; border-radius: 12px; }
+            .card { padding: 16px; }
+            .res-table { font-size: 12px; }
+            .res-table th, .res-table td { padding: 4px 7px; }
+            .bib { padding-top: 46px; }
+        }
+        .fcard img, .card .fig { cursor: zoom-in; }
+    </style>
+</head>
+
+<body>
+
+<header class="hero">
+    <div class="wrap">
+        <div class="venue-badge">WACV 2027</div>
+        <h1 class="wordmark">ComposeAnything</h1>
+        <div class="title">Composite Object Priors for Text-to-Image Generation</div>
+
+        <div class="authors">
+            <a href="https://zeeshank95.github.io" target="_blank">Zeeshan Khan</a>
+            <a href="https://cshizhe.github.io/" target="_blank">Shizhe Chen</a>
+            <a href="https://cordeliaschmid.github.io/" target="_blank">Cordelia Schmid</a>
         </div>
-        <div style="height:10px;"></div>
+        <div class="affiliation">Inria, École normale supérieure, CNRS, PSL Research University</div>
 
-        <table align=center max-width=900px>
-            <tr>
-                <td align=center width=200px>
-                    <center>
-                        <span style="font-size:18px"><a href="https://zeeshank95.github.io" target="_blank">Zeeshan Khan</a></span>
-                    </center>
-                </td>
-                <td align=center width=200px>
-                    <center>
-                        <span style="font-size:18px"><a href="https://cshizhe.github.io/" target="_blank">Shizhe Chen</a></span>
-                    </center>
-                </td>
-                <td align=center width=200px>
-                    <center>
-                        <span style="font-size:18px"><a href="https://cordeliaschmid.github.io/" target="_blank">Cordelia Schmid</a></span>
-                    </center>
-                </td>
-            </tr>
-        </table>
-        <div style="height:5px;"></div>
-
-        <table align=center max-width=650px>
-            <tr>
-                <td align=center width=500px>
-                    <center>
-                        <span style="font-size:16px"><sup>1</sup>Inria, École normale supérieure, CNRS, PSL Research University</span>
-                    </center>
-                </td>
-            </tr>
-        </table>
-        <div style="height:10px;"></div>
-
-        <table align=center width=700px>
-			<tr>
-				<td align=center width=700px>
-					<center>
-						<span style="font-size:16px">Under Review</span>
-					</center>
-				</td>
-			</tr>
-		</table>
-		<div style="height:10px;"></div>
-
-        <div class="links" style="font-weight:bold; text-align:center">
-            <a class="btn btn-info" href="https://arxiv.org/abs/2505.24086" target="_blank">Paper</a>
-            &nbsp;&nbsp;&nbsp;
-            <a class="btn btn-info" href="ca.html#bib">BibTex</a>
-            &nbsp;&nbsp;&nbsp;
-            <a class="btn btn-info" href="https://github.com/zeeshank95/ComposeAnything" target="_blank">Code</a>
-            &nbsp;&nbsp;&nbsp;
+        <div class="links">
+            <a class="pill" href="https://arxiv.org/abs/2505.24086" target="_blank">
+                <svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6V2zm8 1.5V8h4.5L14 3.5zM8 12h8v1.5H8V12zm0 3.5h8V17H8v-1.5z"/></svg>
+                Paper
+            </a>
+            <a class="pill" href="https://github.com/zeeshank95/ComposeAnything" target="_blank">
+                <svg viewBox="0 0 24 24"><path d="M8.7 16.6 4.1 12l4.6-4.6L7.3 6 1.3 12l6 6 1.4-1.4zm6.6 0 4.6-4.6-4.6-4.6L16.7 6l6 6-6 6-1.4-1.4z"/></svg>
+                Code
+            </a>
+            <a class="pill" href="#bib">
+                <svg viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z"/></svg>
+                BibTeX
+            </a>
         </div>
 
-        <hr>
+        <div class="stats">
+            <div class="stat">
+                <div class="head">Editable 2.5D object prior</div>
+                <div class="txt">A collage that fixes each object's appearance, position, size and depth order before generation starts.</div>
+            </div>
+            <div class="stat">
+                <div class="head">Prior-guided diffusion</div>
+                <div class="txt">Object Prior Reinforcement keeps the objects; Spatial-Controlled Denoising ties each region to its own caption.</div>
+            </div>
+            <div class="stat">
+                <div class="head">Inference time only</div>
+                <div class="txt">No retraining. Works on top of SD3-M, SDXL and FLUX.</div>
+            </div>
+        </div>
+    </div>
+</header>
 
-        <div class="row" id="method" style="max-width:1000px; margin:0 auto; text-align:justify">
-            <center>
-                <img src="resources/CA_assets/CA_teaser.png" width="100%">
-            </center>
+<section id="teaser">
+    <div class="wrap">
+        <div class="fcard">
+            <img src="resources/wacv/teaser.jpg" alt="FLUX, RPG, Flow-GRPO and ComposeAnything on 'A chicken behind a clock' and 'Three bears, two girls, three chickens, one chair and two cups'">
+            <p class="fcap">ComposeAnything vs. FLUX, RPG and Flow-GRPO.</p>
+        </div>
+    </div>
+</section>
+
+<section id="abstract" class="tint">
+    <div class="wrap narrow abstract">
+        <h2>Abstract</h2>
+        <p>
+            Layout-based compositional methods improve text-to-image generation by specifying where objects should appear, but most rely on sparse 2D constraints with limited appearance, occlusion, and depth-aware cues. We show that compositional generation can be substantially improved by replacing purely geometric guidance with an editable visual prior for diffusion initialization. We introduce <b>ComposeAnything</b>, an inference-time framework built around a 2.5D Composite Object Prior, an editable RGB image that specifies object appearance, layout, scale, and depth-aware ordering. We transfer this prior through Prior-Guided Diffusion, which combines Object Prior Reinforcement (OPR) to preserve object structure and appearance with Spatial-Controlled Denoising (SCD) to improve region-text alignment and reduce semantic leakage. Early guidance preserves the prior structure, after which standard denoising refines the image coherently. Extensive evaluations on T2I-CompBench, NSR-1K, and GenEval show strong gains in spatial reasoning, 3D-spatial relations, counting, and surreal compositions while maintaining visual quality and efficiency.
+        </p>
+    </div>
+</section>
+
+<section id="method">
+    <div class="wrap">
+        <h2>How It Works</h2>
+
+        <div class="card">
+            <div class="step-tag">Overview</div>
+            <h3>From prompt to image in three steps</h3>
+            <img class="fig" src="resources/wacv/framework.png" alt="ComposeAnything framework: 2.5D layout planning, composite object prior, prior-guided diffusion">
+            <div class="steps">
+                <div>
+                    <div class="n">1</div>
+                    <h4>2.5D layout planning</h4>
+                    <p>An LLM writes a caption, box and depth for every object, plus background and global captions.</p>
+                </div>
+                <div>
+                    <div class="n">2</div>
+                    <h4>Composite object prior</h4>
+                    <p>Each object is generated alone, cut out, resized to its box and pasted back to front into a collage.</p>
+                </div>
+                <div>
+                    <div class="n">3</div>
+                    <h4>Prior-guided diffusion</h4>
+                    <p>Generation starts from the noised collage: guided early steps, then normal denoising.</p>
+                </div>
+            </div>
         </div>
 
-        <div class="row" id="abstract" style="max-width:1000px; margin:0 auto; text-align:justify">
-            <h3>Abstract</h3>
-            <p style="text-align: justify;">
-                Generating images from text involving complex and novel object arrangements remains a significant challenge for current text-to-image (T2I) models. Although prior layout-based methods improve object arrangements using spatial constraints with 2D layouts, they often struggle to capture 3D positioning and sacrifice quality and coherence. In this work, we introduce ComposeAnything, a novel framework for improving compositional image generation without retraining existing T2I models. Our approach first leverages the chain-of-thought reasoning abilities of LLMs to produce 2.5D semantic layouts from text, consisting of 2D object bounding boxes enriched with depth information and detailed captions. Based on this layout, we generate a spatial and depth aware coarse composite of objects that captures the intended composition, serving as a strong and interpretable prior that replaces stochastic noise initialization in diffusion-based T2I models. This prior guides the denoising process through object prior reinforcement and spatial-controlled denoising, enabling seamless generation of compositional objects and coherent backgrounds, while allowing refinement of inaccurate priors. ComposeAnything outperforms state-of-the-art methods on the T2I-CompBench and NSR-1K benchmarks for prompts with 2D/3D spatial arrangements, high object counts, and surreal compositions. Human evaluations further demonstrate that our model generates high-quality images with compositions that faithfully reflect the text.
-	        </p>
-        </div><!-- Import the component -->
+        <div class="card">
+            <div class="step-tag">Prior-guided diffusion</div>
+            <h3>Two kinds of guidance in the early steps</h3>
+            <img class="fig" src="resources/wacv/prior_guided_diffusion.png" alt="Prior-guided diffusion: spatial-controlled denoising (left) and object prior reinforcement (right)">
+            <div class="guides">
+                <div class="guide">
+                    <h4>Object Prior Reinforcement (OPR) &middot; right</h4>
+                    <p>Resets the object regions to the noised prior after every step until <i>t</i><sub>p</sub>, keeping their appearance and depth order.</p>
+                </div>
+                <div class="guide">
+                    <h4>Spatial-Controlled Denoising (SCD) &middot; left</h4>
+                    <p>Denoises each region with its own caption, next to a global branch with the full prompt, until <i>t</i><sub>sc</sub>.</p>
+                </div>
+            </div>
+            <p>Lower <i>t</i><sub>p</sub>, <i>t</i><sub>sc</sub> = stronger guidance. Defaults: <i>t</i><sub>p</sub>&nbsp;=&nbsp;0.91, <i>t</i><sub>sc</sub>&nbsp;=&nbsp;0.96, 28 steps.</p>
+        </div>
+    </div>
+</section>
 
-        <hr>
+<section id="analysis" class="tint">
+    <div class="wrap">
+        <h2>What the Prior Does</h2>
 
-        <div class="row" id="method" style="max-width:1000px; margin:0 auto; text-align:justify">
-            <h3>Method</h3><br>
-            <center>
-                <img src="resources/CA_assets/method.png" width="100%">
-            </center>
-            <br>
-            <p style="text-align: justify;">
-                <b>Our approach.</b> ComposeAnything framework consists of four key components for compositional text-to-image generation: (a) LLM Planning: We employ LLMs to transform the input prompt into a structured 2.5D semantic layout, including object captions, bounding boxes and relative depths; (b) Composite Object Prior: Based on the layout, we generate a coarse composite image that serves as a strong apperance, semantic and, spatial prior, for guiding image generation; and (c) Prior Guided Diffusion: During generation we, replace random noise initialise with a noisy object prior, and iteratively reinforce the object prior. We also apply spatially-controlled self-attention to preserve semantics and structure in early denoising steps. (d) Standard Diffusion: After a few steps when the global structure if formed, we remove all the control and use standard denoising.
-            </p>
-            <br>
+        <div class="fcard">
+            <div class="fcard-head">
+                <div class="step-tag">Robustness</div>
+                <h3>A guide, not a template</h3>
+                <p>The prior acts only in the early steps, so the model fixes what the collage gets wrong. Left: prior, right: final.</p>
+            </div>
+            <img src="resources/wacv/robustness.jpg" alt="Four prior and final image pairs: cyclist with cars, hikers at a campfire, clown in a cable car, girls petting goats">
+            <div class="notes c4">
+                <div><b>Bicycle added</b>cars move behind the rider, with shadows</div>
+                <div><b>Firelight added</b>the fire lights up the faces</div>
+                <div><b>Clown placed</b>moved inside the cable car</div>
+                <div><b>Natural poses</b>the girls now pet the goats</div>
+            </div>
+            <div class="fstat">26% of priors were judged wrong, yet 63% of those still gave a correct image.</div>
         </div>
 
-        <hr>
-
-        <div class="row" id="qual" style="max-width:1000px; margin:0 auto; text-align:justify">
-            <h3>SOTA Comparison</h3><br>
-            <center>
-                <img src="resources/CA_assets/table.png" width="100%">
-            </center>
-            <br>
-            <p style="text-align: justify;">
-                <b>State-of-the-art Comparison.</b> We compoare our method with both (a) training based box-conditioned models (LayoutGPT and CreatiLayout), and (b) Inference only T2I Diffusion models, including standard base models like SDXL, SD3-M, FLUX, layout based models (RealCompo and RPG) and Noise search method (Inference time scaling). Our approch outperform all the existing methods, both training-based and training-free. 
-            </p>
-            <br>
-        </div>        
-
-        <hr>
-
-        <div class="row" id="qual" style="max-width:1000px; margin:0 auto; text-align:justify">
-            <h3>Qualitative Results</h3><br>
-            <center>
-                <img src="resources/CA_assets/SOTA_Fig.png" width="100%">
-            </center>
-            <br>
-            <p style="text-align: justify;">
-                <b>Qualitative Comparison.</b> Qualitative results of the proposed model on complex surreal prompts from T2I-Compbench. The ComposeAnything framework enables text-to-image generation for complex compositions involving surreal spatial relationships and high object counts. It enhances both visual quality and faithfulness to the input text compared to diffusion-based models (e.g., SD3, FLUX) and 2D layout conditioned models (RPG and CreatiLayout).
-            </p>
-            <br>
-        </div>
-        
-        <div class="row" id="qual" style="max-width:1000px; margin:0 auto; text-align:justify">
-            <h3>Composite Object Prior and Generated Image </h3><br>
-            <center>
-                <img src="resources/CA_assets/results.png" width="100%">
-            </center>
-            <br>
-            <p style="text-align: justify;">
-                <b>Qualitative performance.</b> Qualitative results of the proposed model on T2I-Compbench- We show the input prompt, the LLM generated composite object prior, and the corresponding generated image.
-            </p>
-            <br>
+        <div class="fcard">
+            <div class="fcard-head">
+                <div class="step-tag">Guidance strength</div>
+                <h3>How strongly to follow the prior</h3>
+                <p><i>t</i><sub>p</sub> (OPR) and <i>t</i><sub>sc</sub> (SCD) set the strength; lower means stronger.</p>
+            </div>
+            <img src="resources/wacv/strength_joint.jpg" alt="SD3-M baseline, the object prior, and three guidance strengths for 'two apples, one bag, two dogs, four clocks and three microwaves'">
+            <div class="notes c5">
+                <div><b>SD3-M</b>misses objects</div>
+                <div><b>Object prior</b>the LLM's collage</div>
+                <div><b>Too weak</b>layout drifts, counts wrong</div>
+                <div class="hl"><b>Default</b>every object; the blue box becomes the 4th clock</div>
+                <div><b>Too strong</b>prior copied, the box stays a box</div>
+            </div>
         </div>
 
-        <hr>
-
-        <div class="row" id="bib" style="max-width:1000px; margin:0 auto; text-align:justify">
-            <h3>BibTeX</h3>
-               <pre><tt>@inproceedings{khan2025composeanything,
-                title={ComposeAnything: Composite Object Priors for Text-to-Image Generation}, 
-                author={Zeeshan Khan and Shizhe Chen and Cordelia Schmid},
-                year={2025},
-                eprint={2505.24086},
-                archivePrefix={arXiv},
-                url={https://arxiv.org/abs/2505.24086}, 
-          }</tt></pre>
+        <div class="fcard">
+            <div class="fcard-head">
+                <div class="step-tag">2.5D prior</div>
+                <h3>Depth order for 3D relations</h3>
+                <p>2D layouts cannot say which object is in front; our prior is pasted back to front.</p>
+            </div>
+            <img src="resources/wacv/prior_25d.jpg" alt="'A chicken behind a clock' with RPG region layout, CreatiLayout 2D boxes, an incorrectly layered 2.5D prior and a correctly layered 2.5D prior">
+            <div class="notes c1122">
+                <div><b>RPG</b>side by side</div>
+                <div><b>CreatiLayout</b>chicken in front</div>
+                <div><b>Wrong layering</b>chicken in front</div>
+                <div class="hl"><b>Correct layering</b>chicken behind the clock</div>
+            </div>
         </div>
 
-        <hr>
+        <div class="fcard w80">
+            <div class="fcard-head">
+                <div class="step-tag">Editing</div>
+                <h3>Fix the prior by hand</h3>
+                <p>The prior is a picture, so a person can correct it before generating.</p>
+            </div>
+            <img src="resources/wacv/editable_prior.jpg" alt="LLM-generated prior, incorrect generation, edited prior and correct generation for 'A turtle behind a bowl' and 'four drums, three cakes, three dogs and two helmets'">
+            <div class="notes c2">
+                <div><b>Top: turtle</b>moved behind the bowl</div>
+                <div><b>Bottom: drums</b>dogs resized, cakes moved to the front, OPR and SCD slightly stronger</div>
+            </div>
+            <div class="fstat">Editing 48 failed 3D-spatial priors raises the 3D-spatial score from 77.16 to 94.27.</div>
+        </div>
+    </div>
+</section>
 
-        <div class="row" id="acknowledgements" style="max-width:1000px; margin:0 auto; text-align:justify">
-            <h3>Acknowledgements</h3>
+<section id="results">
+    <div class="wrap">
+        <h2>Results</h2>
+
+        <h3 class="sub first">T2I-CompBench and NSR-1K</h3>
+        <p class="lead narrow">Best on 2D/3D-spatial, counting and complex prompts, and on NSR-1K.</p>
+        <div class="table-wrap">
+            <table class="res-table">
+                <thead>
+                    <tr class="grp">
+                        <th rowspan="2">Method</th>
+                        <th colspan="6">T2I-CompBench</th>
+                        <th colspan="2" class="sep">NSR-1K</th>
+                    </tr>
+                    <tr>
+                        <th>2D-Spatial</th><th>Count</th><th>3D-Spatial</th><th>Complex</th><th>Color</th><th>Texture</th>
+                        <th class="sep">Spatial</th><th>Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>SD-v1</td><td>12.46</td><td>44.61</td><td>&ndash;</td><td>30.80</td><td>37.65</td><td>41.56</td><td class="sep">16.89</td><td>31.45</td></tr>
+                    <tr><td>Attend-Excite v2</td><td>14.55</td><td>47.67</td><td>&ndash;</td><td>34.01</td><td>64.00</td><td>59.63</td><td class="sep">26.86</td><td>39.41</td></tr>
+                    <tr><td>SDXL</td><td>21.33</td><td>49.88</td><td>47.12</td><td>32.37</td><td>58.79</td><td>52.99</td><td class="sep">31.57</td><td>30.62</td></tr>
+                    <tr><td>PixArt-&alpha;</td><td>20.82</td><td>50.58</td><td>38.62</td><td>33.57*</td><td>68.86</td><td>70.44</td><td class="sep">&ndash;</td><td>&ndash;</td></tr>
+                    <tr><td>RealCompo</td><td>31.73</td><td>65.92</td><td>&ndash;</td><td>31.27*</td><td>77.41</td><td class="best">74.27</td><td class="sep">&ndash;</td><td>&ndash;</td></tr>
+                    <tr><td>SD3-M</td><td>31.32</td><td>60.22</td><td>49.43</td><td>37.71</td><td>81.32</td><td>73.34</td><td class="sep">44.43</td><td>44.61</td></tr>
+                    <tr><td>FLUX</td><td>26.13</td><td>60.58</td><td>59.51</td><td>37.03</td><td>74.07</td><td>69.22</td><td class="sep">39.29</td><td>55.97</td></tr>
+                    <tr><td>RPG*</td><td>40.26</td><td>56.39</td><td>50.93</td><td>36.53</td><td>76.80</td><td>61.95</td><td class="sep">52.24</td><td>39.81</td></tr>
+                    <tr><td>RAGD*</td><td>42.56</td><td>57.38</td><td>62.42</td><td>36.68</td><td>80.39</td><td>70.85</td><td class="sep">&ndash;</td><td>&ndash;</td></tr>
+                    <tr><td>Inference-scale</td><td>31.51</td><td>67.89</td><td>&ndash;</td><td>38.10</td><td class="best">83.03</td><td>73.64</td><td class="sep">&ndash;</td><td>&ndash;</td></tr>
+                    <tr class="ours"><td>ComposeAnything</td><td class="best">48.24</td><td class="best">68.21</td><td class="best">77.16</td><td class="best">38.66</td><td>81.11</td><td>73.74</td><td class="sep best">63.80</td><td class="best">59.36</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="tcap">Inference-based methods. * reproduced.</p>
+
+        <h3 class="sub">GenEval</h3>
+        <p class="lead narrow">Best overall, and 7&ndash;18&times; faster than Reflect-DiT and InstanceGen.</p>
+        <div class="table-wrap">
+            <table class="res-table">
+                <thead>
+                    <tr>
+                        <th>Method</th><th>Single obj.</th><th>Two obj.</th><th>Count</th><th>Color</th><th>Position</th><th>Attribute</th><th>Overall &uarr;</th><th class="sep">Time (s) &darr;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>SD3-M</td><td>0.99</td><td>0.84</td><td>0.56</td><td>0.84</td><td>0.32</td><td>0.52</td><td>0.68</td><td class="sep best">4.0</td></tr>
+                    <tr><td>RPG*</td><td>0.99</td><td>0.82</td><td>0.43</td><td>0.76</td><td>0.63</td><td>0.64</td><td>0.71</td><td class="sep">15.49</td></tr>
+                    <tr><td>CARINOX</td><td>1.00</td><td>0.86</td><td>0.66</td><td>0.90</td><td>0.16</td><td>0.48</td><td>0.68</td><td class="sep">70.0</td></tr>
+                    <tr><td>Reflect-DiT</td><td>0.98</td><td>0.96</td><td>0.80</td><td>0.88</td><td>0.66</td><td>0.60</td><td>0.81</td><td class="sep">118.0</td></tr>
+                    <tr><td>InstanceGen</td><td>0.97</td><td>0.87</td><td>0.68</td><td>0.85</td><td>0.64</td><td>0.73</td><td>0.79</td><td class="sep">300.0</td></tr>
+                    <tr class="ours"><td>ComposeAnything</td><td>1.00</td><td>0.93</td><td>0.70</td><td>0.85</td><td>0.83</td><td>0.72</td><td class="best">0.84</td><td class="sep">16.37</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="tcap">* reproduced. Time: seconds per image.</p>
+
+        <h3 class="sub">Qualitative comparison</h3>
+        <div class="fcard">
+            <img src="resources/wacv/comparison.jpg" alt="SD3-M, RPG, CreatiLayout, Flow-GRPO and ComposeAnything on four counting, 2D-spatial and 3D-spatial prompts">
+            <p class="fcap">Counting, 2D- and 3D-spatial prompts, against inference-only and training-based methods.</p>
+        </div>
+    </div>
+</section>
+
+<section id="bib" class="tint">
+    <div class="wrap narrow">
+        <h2>BibTeX</h2>
+        <pre class="bib"><button class="copy" type="button" onclick="copyBib(this)">Copy</button><code id="bibtex">@inproceedings{khan2027composeanything,
+  title     = {ComposeAnything: Composite Object Priors for Text-to-Image Generation},
+  author    = {Khan, Zeeshan and Chen, Shizhe and Schmid, Cordelia},
+  booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+  year      = {2027}
+}</code></pre>
+    </div>
+</section>
+
+<section id="ack">
+    <div class="wrap narrow">
+        <div class="fine">
+            <h4>Acknowledgements</h4>
             <p>
-                This work was granted access to the HPC resources of IDRIS under the allocation AD011014688R1 made by GENCI. 
-It was funded in part by the French government under management of Agence Nationale de la Recherche as part of the “France 2030" program, reference ANR-23-IACL-0008 (PR[AI]RIE-PSAI projet), and Paris Île-de-France Région in the frame of the DIM AI4IDF. Cordelia Schmid would like to acknowledge the support by the Körber European Science Prize.
+                This work was granted access to the HPC resources of IDRIS under the allocation AD011014688R1 made by GENCI. It was funded in part by the French government under management of Agence Nationale de la Recherche as part of the &ldquo;France 2030&rdquo; program, reference ANR-23-IACL-0008 (PR[AI]RIE-PSAI projet), and Paris Île-de-France Région in the frame of the DIM AI4IDF. Cordelia Schmid would like to acknowledge the support by the Körber European Science Prize.
             </p>
-        </div>
-
-        <hr>
-
-        <div class="row" id="copyright" style="max-width:1000px; margin:0 auto; text-align:justify">
-            <h3>Copyright</h3>
+            <h4>Copyright</h4>
             <p>
                 The documents contained in these directories are included by the contributing authors as a means to ensure timely dissemination of scholarly and technical work on a non-commercial basis. Copyright and all rights therein are maintained by the authors or by other copyright holders, notwithstanding that they have offered their works here electronically. It is understood that all persons copying this information will adhere to the terms and constraints invoked by each author's copyright.
             </p>
         </div>
+    </div>
+</section>
 
-        <hr>
-
-        <div class="row">
-            <div class="col-md-3 col-sm-9">
-                <center>
-                   <img src="resources/inria_logo.png" width="150">
-                </center>
-            </div>
-            <div class="col-md-3 col-sm-9">
-                <center>
-                   <img src="resources/ens_logo.png" width="150">
-                </center>
-            </div>
+<footer>
+    <div class="wrap">
+        <div class="logos">
+            <img src="resources/inria_logo.png" width="150" alt="Inria">
+            <img src="resources/ens_logo.png" width="150" alt="École normale supérieure">
         </div>
+    </div>
+</footer>
 
-   </body>
+<script>
+    function copyBib(btn) {
+        var text = document.getElementById('bibtex').innerText;
+        try {
+            navigator.clipboard.writeText(text).then(function () {
+                btn.textContent = 'Copied';
+                setTimeout(function () { btn.textContent = 'Copy'; }, 1500);
+            });
+        } catch (e) {}
+    }
+    // click a figure to open it full size (small on phones)
+    document.querySelectorAll('.fcard img, .card .fig').forEach(function (img) {
+        img.addEventListener('click', function () { window.open(img.src, '_blank'); });
+    });
+</script>
+</body>
 </html>
