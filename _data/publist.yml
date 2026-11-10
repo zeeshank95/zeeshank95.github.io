@@ -1,8 +1,22 @@
+- title: 'DeFlowCritic: Dense Latent Reward Alignment for Text-to-Image Flow Matching Models'
+  image: deflowcritic.png
+  description: DeFlowCritic is a latent critic that scores noisy intermediate latents using the diffusion model's own features, giving dense rewards across the denoising trajectory for online RL. It matches Flow-GRPO on composition with higher image quality at a tenth of the training time, enables inference-time scaling, and generalizes across SD3.5-Medium, SD3.5-Large and FLUX.1-dev.
+  authors: <b>Zeeshan Khan</b>, Xin Yu, <a href="https://cshizhe.github.io">Shizhe Chen</a>, <a href="https://cordeliaschmid.github.io">Cordelia Schmid</a>
+  venue: <i>In Neural Information Processing Systems (<b>NeurIPS</b>), 2026</i>
+  number_link: 2
+  link1:
+    url: https://zeeshank95.github.io/deflowcritic/
+    display: Project Page
+  link2:
+    url: https://github.com/zeeshank95/DeFlowCritic
+    display: Code (Github)
+
+
 - title: 'ComposeAnything: Composite Object Priors for Text-to-Image Generation'
   image: CA_teaser.png
   description: ComposeAnything framework enables interpretable text-to-image generation for complex compositions involving surreal 2D, 3D spatial relationships and high object counts.
-  authors: <b>Zeeshan Khan</b>, <a href="https://cshizhe.github.io">Shizhe Chen</a>, <a href="https://cordeliaschmid.github.io">Cordelia Schmid</a> 
-  venue: <i> under review </i>
+  authors: <b>Zeeshan Khan</b>, <a href="https://cshizhe.github.io">Shizhe Chen</a>, <a href="https://cordeliaschmid.github.io">Cordelia Schmid</a>
+  venue: <i>In the Winter Conference on Applications of Computer Vision (<b>WACV</b>) 2027</i>
   number_link: 3
   link1:
     url: https://arxiv.org/abs/2505.24086
