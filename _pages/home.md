@@ -57,7 +57,7 @@ My research focuses on post-training diffusion and flow-based policies with rein
 ### Publications
 ****
 
-{% for publi in site.data.publist limit:10 %}
+{% for publi in site.data.publist limit:11 %}
 
 <div class="col-sm-11 clearfix">
  <div class="well">

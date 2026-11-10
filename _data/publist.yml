@@ -27,7 +27,18 @@
   link3:
     url: https://github.com/zeeshank95/ComposeAnything
     display: Code (Github)
-    
+
+
+- title: 'SRL-CLIP: Efficient CLIP Video Adaptation via Structured Semantic Role Labels'
+  image: srlclip.png
+  description: Adapting image-text models like CLIP for video understanding is often inefficient because prior works rely on video datasets with sparse captions that lack the detailed information needed to describe an event holistically. Our paper addresses this by using Semantic Role Labels (SRLs) - a dense, structured format that explicitly captures actions, people, objects, and locations. We demonstrate that simple finetuning on orders of magnitude smaller of such video-caption pairs is adequate to learn powerful, transferable representations applicable across a diverse range of video understanding tasks.
+  authors: Darshan Singh, <b>Zeeshan Khan</b>, <a href="https://makarandtapaswi.github.io">Makarand Tapaswi</a>
+  venue: <i>CV4Smalls Workshop, <b>CVPR</b> 2026</i>, <span style="color:red;"><b>Best Paper Award</b></span> 🏆
+  number_link: 1
+  link1:
+    url: https://arxiv.org/abs/2401.07669
+    display: Paper
+
 
 - title: 'VELOCITI: Can Video-Language Models Bind Semantic Concepts Through Time?'
   image: velociti.png
