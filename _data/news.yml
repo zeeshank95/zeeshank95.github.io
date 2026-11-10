@@ -1,3 +1,15 @@
+- date: October, 2026
+  headline: <a href="https://zeeshank95.github.io/composeanything/ca.html">ComposeAnything</a> accepted to <a href="https://wacv.thecvf.com">WACV 2027</a>! We use composite object priors for compositional text-to-image generation.
+
+- date: September, 2026
+  headline: <a href="https://zeeshank95.github.io/deflowcritic/">DeFlowCritic</a> accepted to <a href="https://neurips.cc">NeurIPS 2026</a>! Dense latent rewards for efficient RL post-training of text-to-image flow matching models.
+
+- date: June, 2026
+  headline: <a href="https://arxiv.org/abs/2401.07669">SRL-CLIP</a> won the <span style="color:red;"><b>Best Paper Award</b></span> 🏆 at the CV4Smalls Workshop, CVPR 2026!
+
+- date: April, 2026
+  headline: <a href="https://arxiv.org/abs/2401.07669">SRL-CLIP</a> accepted to the CV4Smalls Workshop at <a href="https://cvpr.thecvf.com">CVPR 2026</a>! Efficient CLIP video adaptation with structured semantic role labels.
+
 - date: May, 2025
   headline: Released our new work <a href="https://zeeshank95.github.io/composeanything/ca.html">ComposeAnything</a>, for compositional text to image gneration.
 
