@@ -12,11 +12,11 @@ permalink: /
 
 <div class="col-sm-8">
 
-Hi! I am a second year PhD student in the <a href="http://www.di.ens.fr/willow">Willow</a> team at <a href="https://www.inria.fr/en">Inria</a> and  <a href="https://www.ens.psl.eu/en">École Normale Supérieure</a> in Paris, advised by <a href="https://cordeliaschmid.github.io">Cordelia Schmid</a> and <a href="https://cshizhe.github.io">Shizhe Chen</a>. I am working on Diffusion models for vision-language generation. 
+Hi! I am a third year PhD student in the <a href="http://www.di.ens.fr/willow">Willow</a> team at <a href="https://www.inria.fr/en">Inria</a> and  <a href="https://www.ens.psl.eu/en">École Normale Supérieure</a> in Paris, advised by <a href="https://cordeliaschmid.github.io">Cordelia Schmid</a> and <a href="https://cshizhe.github.io">Shizhe Chen</a>. I am working on Diffusion models for vision-language generation. 
 
 I did my Masters by Research in Computer Science from <a href="http://cvit.iiit.ac.in">CVIT IIIT Hyderabad</a> advised by <a href="https://faculty.iiit.ac.in/~jawahar/index.html">C.V. Jawahar</a> and <a href="https://makarandtapaswi.github.io">Makarand Tapaswi</a>. My thesis was on Situation Recognition for Holistic Video Understanding, exploring structured representations to enable deeper semantic understanding of dynamic scenes. Prior to this I was a Research Assistant in the Computer Vision lab at <a href="https://iitgn.ac.in">IIT Gandhinagar</a>, where I worked with <a href="https://shanmuga.people.iitgn.ac.in"> Shanmuganathan Raman</a>. My work centered around Computational Photography, specifically in high dynamic range (HDR) image and video reconstruction.
 
-I am broadly interested in unified large multimodal diffusion models particularly at the intersection of vision and language for joint understanding and generation across text, images, and videos. Currently I am exploring compositional representations for high fidelity and interpretable text-to-image/video diffusion models.
+My research focuses on post-training diffusion and flow-based policies with reinforcement learning. I am particularly interested in dense, efficient reward signals, such as critics that score intermediate latents, and in making generations follow complex compositional prompts while keeping visual quality high.
 
 <p align="center">
   <a href="./docs/Zeeshan_cv_2022.pdf">CV</a> /
